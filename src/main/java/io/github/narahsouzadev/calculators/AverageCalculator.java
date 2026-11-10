@@ -65,11 +65,42 @@ public class AverageCalculator {
                         System.out.println("Average: " + average);
                     }
                 }
-                case 2 -> System.out.println("\nCalculation of Weighted Average");
+                case 2 -> {
+                    int valueNumber = 1;
+                    double weightedSum = 0.0;
+                    double weightsSum = 0.0;
+                    boolean running = true;
+                    while (running) {
+                        System.out.println("\nEnter the value " + valueNumber);
+                        double nextValue = scanner.nextDouble();
+
+                        System.out.println("What is the weight of this value?");
+                        double weight = scanner.nextDouble();
+
+                        double weightedValue = nextValue * weight;
+
+                        weightedSum += weightedValue;
+                        weightsSum += weight;
+
+                        System.out.println("Is there any other value?");
+                        System.out.println("1 - Yes");
+                        System.out.println("2 - No");
+                        int option = scanner.nextInt();
+                        switch (option) {
+                            case 1 -> {
+                                valueNumber += 1;
+                                continue;
+                            }
+                            case 2 -> {
+                                double average = weightedSum / weightsSum;
+                                System.out.println(average);
+                                running = false;
+                            }
+                        }
+                    }
+                }
                 default -> System.out.println("\nInvalid option, try again.");
             }
-
-
         }
     }
 }

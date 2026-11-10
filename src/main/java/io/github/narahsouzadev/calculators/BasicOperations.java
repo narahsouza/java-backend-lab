@@ -53,7 +53,7 @@ public class BasicOperations {
             scanner.nextLine(); // Consumes the remaining newline in the buffer
 
             // Operations
-            double result = 0.0;
+            double result;
 
             switch (input) {
                 case 1 -> {

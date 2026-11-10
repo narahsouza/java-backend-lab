@@ -10,7 +10,7 @@ public class BMICalculator {
         String invalidValueMessage = "The value entered must be greater than zero.";
 
         System.out.println("Body Mass Index (BMI)");
-        double weight = 0;
+        double weight;
         while (true) {
             System.out.println("Enter your weight in kilograms: ");
 
@@ -27,7 +27,7 @@ public class BMICalculator {
 
         }
 
-        int height = 0;
+        int height;
         while (true) {
             System.out.println("Enter your height in centimeters: ");
 

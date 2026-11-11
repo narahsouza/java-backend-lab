@@ -82,6 +82,13 @@ public class AverageCalculator {
                         double nextValue = scanner.nextDouble();
 
                         System.out.println("What is the weight of this value?");
+
+                        if (!scanner.hasNextDouble()) {
+                            System.out.println("Invalid input, please try again.");
+                            scanner.next(); // Consumes the invalid token to prevent an infinite loop
+                            continue;
+                        }
+
                         double weight = scanner.nextDouble();
 
                         double weightedValue = nextValue * weight;

@@ -99,7 +99,21 @@ public class AverageCalculator {
                         System.out.println("Is there any other value?");
                         System.out.println("1 - Yes");
                         System.out.println("2 - No");
+                        System.out.println("Enter the option number or '0' to return.");
+
+                        if (!scanner.hasNextInt()) {
+                            System.out.println("Invalid input, please try again.");
+                            scanner.next(); // Consumes the invalid token to prevent an infinite loop
+                            continue;
+                        }
+
                         int option = scanner.nextInt();
+
+                        if (option == 0) {
+                            System.out.println("Returning to main menu...");
+                            return;
+                        }
+
                         switch (option) {
                             case 1 -> {
                                 valueNumber += 1;

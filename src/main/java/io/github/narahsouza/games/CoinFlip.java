@@ -1,4 +1,4 @@
-package io.github.narahsouzadev.games;
+package io.github.narahsouza.games;
 import java.util.Random;
 import java.util.Scanner;
 

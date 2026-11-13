@@ -1,22 +1,19 @@
-package io.github.narahsouzadev.calculators;
-
+package io.github.narahsouza.games;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("\nWelcome to Java CLI Calculators!");
+        System.out.println("\nWelcome to Java CLI Games!");
 
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
         while (running) {
-            System.out.println("\nWhat do you want to calculate?");
-            System.out.println("1 - Basic Operations");
-            System.out.println("2 - Parity and Sign Checker");
-            System.out.println("3 - Average Calculator");
-            System.out.println("4 - Tally Counter");
-            System.out.println("5 - Body Mass Index (BMI)");
-            System.out.println("Enter the option number or '0' to exit: ");
+            System.out.println("\nWhat do you want to play?");
+            System.out.println("1 - Coin Flip");
+            System.out.println("2 - Dice Roller");
+            System.out.println("3 - Guess The Number");
+            System.out.println("Enter the game number or '0' to exit: ");
 
             if (!scanner.hasNextInt()) {
                 System.out.println("Invalid command, try again.");
@@ -28,11 +25,9 @@ public class Main {
             scanner.nextLine(); // Consumes the remaining newline in the buffer
 
             switch (input) {
-                case 1 -> BasicOperations.run(scanner);
-                case 2 -> ParityAndSignChecker.run(scanner);
-                case 3 -> AverageCalculator.run(scanner);
-                case 4 -> TallyCounter.run(scanner);
-                case 5 -> BMICalculator.run(scanner);
+                case 1 -> CoinFlip.run(scanner);
+                case 2 -> DiceRoller.run(scanner);
+                case 3 -> GuessTheNumber.run(scanner);
                 case 0 -> {
                     System.out.println("Goodbye!");
                     scanner.close();

@@ -49,4 +49,4 @@ Welcome to my Java Backend Lab repository. This repository documents my practica
 
 ## 👤 Author
 
-Developed by **Narah Souza** ([GitHub Profile](https://github.com/narahsouzadev)).
+Developed by **Narah Souza** ([GitHub Profile](https://github.com/narahsouza)).
